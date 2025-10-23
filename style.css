@@ -1,18 +1,92 @@
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-}
 
-header {
-    background: #0066cc;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
+    <style>
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
 
-#map {
-    width: 100%;
-    height: calc(100% - 50px);
-}
+        body {
+            background-color: #000000;
+            color: #00FF00;
+            margin: 0;
+            height: 100%;
+        }
+
+        header {
+            background: #0066cc;
+            color: #00FF00;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 255, 0, 0.2);
+            position: relative;
+        }
+
+        h2 {
+            margin: 0;
+            font-size: 1.8em;
+            text-shadow: 0 0 5px #00FF00;
+        }
+
+        #map {
+            width: 100%;
+            height: calc(100% - 80px); /* Adjusted for control bar */
+            border: 2px solid #00FF00;
+            box-shadow: 0 0 10px #00FF00;
+        }
+
+        .leaflet-popup-content-wrapper {
+            background: #1a1a1a;
+            color: #00FF00;
+            border: 1px solid #00FF00;
+            box-shadow: 0 0 5px #00FF00;
+        }
+
+        .leaflet-popup-tip {
+            background: #1a1a1a;
+            border-top: 1px solid #00FF00;
+            border-left: 1px solid #00FF00;
+        }
+
+        .leaflet-marker-icon {
+            filter: hue-rotate(90deg);
+        }
+
+        /* Control bar styling */
+        .control-bar {
+            background: #1a1a1a;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            box-shadow: 0 2px 5px rgba(0, 255, 0, 0.3);
+        }
+
+        select, button {
+            background: #000000;
+            color: #00FF00;
+            border: 1px solid #00FF00;
+            padding: 8px 12px;
+            border-radius: 5px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        select:hover, button:hover {
+            background: #00FF00;
+            color: #000000;
+            box-shadow: 0 0 5px #00FF00;
+        }
+
+        select:focus, button:focus {
+            outline: none;
+            box-shadow: 0 0 8px #00FF00;
+        }
+
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+    </style>
